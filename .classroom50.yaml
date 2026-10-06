@@ -1,0 +1,12 @@
+schema: "classroom50/repo-config/v1"
+classroom: "etc5523"
+assignment: "assignment-3"
+owner:
+  username: "ChenuliDias"
+  id: 265402818
+  accepted_at: "2026-10-06T08:29:22Z"
+source:
+  owner: "ETC5523-2026"
+  owner_id: 265932295
+  repo: "assignment-3"
+  branch: "main"
