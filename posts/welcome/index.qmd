@@ -16,8 +16,8 @@ execute:
 
 ```{r}
 #| label: fig-likelihood
-#| fig-cap: "The chance of fire weather as extreme as Black Summer (2019–20) is already higher than in the early 1900s, and could become about eight times higher if the world warms by 2°C. Each estimate compares the chance of this kind of fire weather happening in southeastern Australia in any given year with the chance in the early 1900s, where 1× would mean no change. Filled dots show the best estimate and open circles show the lowest likely value. Real weather records only give a lowest likely value, so the true figure could be higher. Data: van Oldenborgh et al. (2021)."
-#| fig-alt: "Dot plot comparing the chance of Black Summer-level fire weather in any given year with the chance in the early 1900s. Climate models give a best estimate of about 1.8 times today, and at least 1.3 times. Real weather records show at least 4 times today, possibly higher. If the world warms by 2 degrees, climate models give a best estimate of about 8 times, and at least 4 times."
+#| fig-cap: "The chance of fire weather as extreme as Black Summer (2019–20) is already higher than in the early 1900s, and could become about eight times higher if the world warms by 2°C. Each estimate compares the chance of this kind of fire weather happening in southeastern Australia in any given year with the chance in the early 1900s. The dashed line (1×) marks the same chance as back then. Filled dots show the best estimate and open circles show the lowest likely value. Real weather records only give a lowest likely value, so the true figure could be higher. Data: @vanoldenborgh2021."
+#| fig-alt: "Dot plot comparing the chance of Black Summer-level fire weather in any given year with the chance in the early 1900s, which is marked by a dashed line at 1 times. Climate models give a best estimate of about 1.8 times today, and at least 1.3 times. Real weather records show at least 4 times today, possibly higher. If the world warms by 2 degrees, climate models give a best estimate of about 8 times, and at least 4 times."
 #| fig-width: 8
 #| fig-height: 5
 
@@ -38,6 +38,15 @@ dots <- tibble(
 dots$scenario <- factor(dots$scenario, levels = dots$scenario)
 
 ggplot(dots, aes(x = scenario)) +
+  # Reference line: same chance as the early 1900s
+  geom_hline(yintercept = 1, linetype = "dashed", colour = "grey55") +
+  # Side annotation with an arrow pointing to the reference line
+  annotate("text", x = 3.65, y = 2.6,
+           label = "Same chance as\nthe early 1900s",
+           hjust = 0, size = 3.4, colour = "grey30", lineheight = 0.9) +
+  annotate("segment", x = 3.85, xend = 3.85, y = 2.1, yend = 1.08,
+           colour = "grey40", linewidth = 0.5,
+           arrow = arrow(length = unit(0.2, "cm"), type = "closed")) +
   # Line from the lowest likely value to the best estimate
   geom_segment(aes(xend = scenario, y = at_least, yend = best),
                linewidth = 1.2, colour = "#1f4035", na.rm = TRUE) +
@@ -55,7 +64,7 @@ ggplot(dots, aes(x = scenario)) +
   scale_y_continuous(breaks = c(0, 1, 2, 4, 6, 8),
                      labels = function(x) paste0(x, "×"),
                      expand = c(0, 0)) +
-  scale_x_discrete(expand = expansion(add = c(0.5, 0.9))) +
+  scale_x_discrete(expand = expansion(add = c(0.5, 1.3))) +
   coord_cartesian(ylim = c(0, 9.5), clip = "off") +
   labs(x = NULL,
        y = "Chance of Black Summer-level\nfire weather happening\n(compared with the early 1900s)") +
