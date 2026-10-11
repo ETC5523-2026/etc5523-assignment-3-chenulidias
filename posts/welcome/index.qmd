@@ -1,5 +1,5 @@
 ---
-title: "Black Summer fire weather is now more likely, and could become far more common"
+title: "Climate change has nearly doubled the chance of Black Summer-level fire weather"
 description: "What a climate study found about bushfire weather in southeastern Australia, and what it means for people who live there."
 author: "Chenuli Muthukuda Arachchige"
 date: "2026-10-12"
@@ -11,6 +11,24 @@ execute:
   warning: false
   message: false
 ---
+
+In southeastern Australia, the extreme fire weather behind the 2019–20 Black Summer bushfires is no longer as rare as it once was. Climate models show the chance of it happening in any given year has risen since the early 1900s, to about 1.8 times what it was then. If global warming reaches 2°C, that chance could rise to about eight times the early-1900s level [@vanoldenborgh2021].
+
+
+## Black Summer showed how dangerous extreme fire weather can be
+
+
+Black Summer burned more land near towns and cities than any bushfire season before it. Between late 2019 and January 2020, the fires killed at least 34 people, destroyed about 5,900 buildings and burned at least 19.4 million hectares [@vanoldenborgh2021]. They followed Australia's hottest and driest year on record [@bom2020].
+
+For anyone living near the bush, those fires raise an unsettling question: was Black Summer a once-in-a-lifetime disaster, or a sign of things to come? Answering that question means asking two things: is fire weather this extreme becoming more common, and what is driving it?
+
+A team of 17 researchers set out to find out [@vanoldenborgh2021]. They focused on southeastern Australia, where the fires were particularly severe. They then compared two periods: today, and the early 1900s, before most human-caused warming. For each, they estimated the chance of Black Summer-level fire weather happening in any given year.
+
+By "fire weather", the researchers mean the weather conditions that make bushfires more dangerous: heat, dry air, wind and a lack of rain. They looked only at the weather, not at how fires start or how much bush there is to burn.
+
+The researchers report their results as "times as likely". For example, if Black Summer-level fire weather were twice as likely, you could expect a season like it twice as often as in the early 1900s. The rest of this post looks at how much more likely this fire weather has become, what is driving the change, and what it means for you.
+
+
 
 ## Dangerous fire weather is already more likely than a century ago
 
