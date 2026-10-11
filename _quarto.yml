@@ -6,7 +6,8 @@ website:
   title: "Chenuli Dias | Data Stories"
   navbar:
     right:
-      - about.qmd
+      - text: About
+        href: about.qmd
       - icon: github
         href: https://github.com/ChenuliDias
 format:

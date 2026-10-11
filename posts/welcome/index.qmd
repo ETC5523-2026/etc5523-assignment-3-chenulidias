@@ -1,12 +1,99 @@
 ---
-title: "Welcome To My Blog Template"
-author: "Emi Tanaka"
-date: "2022-07-18"
-categories: [news]
+title: "Black Summer fire weather is now more likely, and could become far more common"
+description: "What a climate study found about bushfire weather in southeastern Australia, and what it means for people who live there."
+author: "Chenuli Muthukuda Arachchige"
+date: "2026-10-12"
+categories: [bushfires, climate, data]
+image: thumbnail.jpg
+bibliography: references.bib
+execute:
+  echo: false
+  warning: false
+  message: false
 ---
 
-This is the first post in a Quarto blog. Welcome!
+## Dangerous fire weather is already more likely than a century ago
 
-![](thumbnail.jpg)
+```{r}
+#| label: fig-likelihood
+#| fig-cap: "The chance of fire weather as extreme as Black Summer (2019–20) is already higher than in the early 1900s, and could become about eight times higher if the world warms by 2°C. Each estimate compares the chance of this kind of fire weather happening in southeastern Australia in any given year with the chance in the early 1900s, where 1× would mean no change. Filled dots show the best estimate and open circles show the lowest likely value. Real weather records only give a lowest likely value, so the true figure could be higher. Data: van Oldenborgh et al. (2021)."
+#| fig-alt: "Dot plot comparing the chance of Black Summer-level fire weather in any given year with the chance in the early 1900s. Climate models give a best estimate of about 1.8 times today, and at least 1.3 times. Real weather records show at least 4 times today, possibly higher. If the world warms by 2 degrees, climate models give a best estimate of about 8 times, and at least 4 times."
+#| fig-width: 8
+#| fig-height: 5
+
+library(ggplot2)
+library(tibble)
+
+# Results reported by van Oldenborgh et al. (2021)
+dots <- tibble(
+  scenario = c("Today\n(climate models)",
+               "Today\n(real weather records)",
+               "If the world warms by 2°C\n(climate models)"),
+  at_least = c(1.3, 4, 4),
+  best     = c(1.8, NA, 8),
+  at_least_label = c("At least 1.3×",
+                     "At least 4×\n(could be higher)",
+                     "At least 4×")
+)
+dots$scenario <- factor(dots$scenario, levels = dots$scenario)
+
+ggplot(dots, aes(x = scenario)) +
+  # Line from the lowest likely value to the best estimate
+  geom_segment(aes(xend = scenario, y = at_least, yend = best),
+               linewidth = 1.2, colour = "#1f4035", na.rm = TRUE) +
+  # Open circle = lowest likely value; filled dot = best estimate
+  geom_point(aes(y = at_least), shape = 21, fill = "#f7f4eb",
+             colour = "#1f4035", size = 4, stroke = 1.4) +
+  geom_point(aes(y = best), colour = "#1f4035", size = 4.5, na.rm = TRUE) +
+  # Labels written beside each dot (direct labels instead of a legend)
+  geom_text(aes(y = best, label = paste0("Best estimate: about ", best, "×")),
+            nudge_x = 0.1, hjust = 0, size = 3.6, colour = "#24352d",
+            na.rm = TRUE) +
+  geom_text(aes(y = at_least, label = at_least_label),
+            nudge_x = 0.1, hjust = 0, size = 3.6, colour = "#24352d",
+            lineheight = 0.9) +
+  scale_y_continuous(breaks = c(0, 1, 2, 4, 6, 8),
+                     labels = function(x) paste0(x, "×"),
+                     expand = c(0, 0)) +
+  scale_x_discrete(expand = expansion(add = c(0.5, 0.9))) +
+  coord_cartesian(ylim = c(0, 9.5), clip = "off") +
+  labs(x = NULL,
+       y = "Chance of Black Summer-level\nfire weather happening\n(compared with the early 1900s)") +
+  theme_minimal(base_size = 13) +
+  theme(
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor   = element_blank(),
+    axis.line          = element_line(colour = "grey40"),
+    axis.ticks         = element_line(colour = "grey40"),
+    axis.text.x        = element_text(colour = "#24352d"),
+    plot.background    = element_rect(fill = "#f7f4eb", colour = NA)
+  )
+```
+
+
+## Rising heat is doing most of the work
+
+```{r}
+#| label: tbl-drivers
+#| tbl-cap: "Heat is the main reason fire weather has become more dangerous, while rainfall shows no long-term climate change trend. The number columns show how important each weather ingredient is as a cause of the rise in fire danger. Data: van Oldenborgh et al. (2021)."
+
+# Findings reported by van Oldenborgh et al. (2021)
+drivers <- tibble::tibble(
+  `Weather ingredient` = c("Heat",
+                           "Dry air (low humidity)",
+                           "Rainfall and drought",
+                           "Wind"),
+  `How many of the 4 climate models found it as the biggest cause` = c(3, 1, 0, 0),
+  `Its rank in real weather records (1 = biggest cause)` = c(1, 2, 3, 4),
+  `What the study found` = c(
+    "Explains about half of the rise in fire danger in two models. Hot weeks like December 2019 are now at least 2× as likely, and 1–2°C hotter than in the early 1900s.",
+    "The biggest cause in one model, and shares the lead with heat and wind in another.",
+    "No climate change trend in extreme drought, even though 2019 was Australia's driest year on record. More than half of the 2019 dry spell came from natural swings in ocean and wind patterns.",
+    "Shares the lead with heat and dry air in one model. Otherwise the smallest cause."
+  )
+)
+
+knitr::kable(drivers, align = c("l", "r", "r", "l"))
+```
 
 

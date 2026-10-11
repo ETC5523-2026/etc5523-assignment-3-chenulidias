@@ -9,15 +9,29 @@
   {
     "objectID": "posts/welcome/index.html",
     "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog Template",
+    "title": "Black Summer fire weather is now more likely, and could become far more common",
     "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!"
+    "text": "Figure 1: The chance of fire weather as extreme as Black Summer (2019–20) is already higher than in the early 1900s, and could become about eight times higher if the world warms by 2°C. Each estimate compares the chance of this kind of fire weather happening in southeastern Australia in any given year with the chance in the early 1900s, where 1× would mean no change. Filled dots show the best estimate and open circles show the lowest likely value. Real weather records only give a lowest likely value, so the true figure could be higher. Data: van Oldenborgh et al. (2021)."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "ETC5523 Blog Assessment",
     "section": "",
-    "text": "Welcome To My Blog Template\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJul 18, 2022\n\n\nEmi Tanaka\n\n\n\n\n\nNo matching items"
+    "text": "Black Summer fire weather is now more likely, and could become far more common\n\n\n\nbushfires\n\nclimate\n\ndata\n\n\n\nWhat a climate study found about bushfire weather in southeastern Australia, and what it means for people who live there.\n\n\n\n\n\nOct 12, 2026\n\n\nChenuli Muthukuda Arachchige\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/welcome/index.html#dangerous-fire-weather-is-already-more-likely-than-a-century-ago",
+    "href": "posts/welcome/index.html#dangerous-fire-weather-is-already-more-likely-than-a-century-ago",
+    "title": "Black Summer fire weather is now more likely, and could become far more common",
+    "section": "",
+    "text": "Figure 1: The chance of fire weather as extreme as Black Summer (2019–20) is already higher than in the early 1900s, and could become about eight times higher if the world warms by 2°C. Each estimate compares the chance of this kind of fire weather happening in southeastern Australia in any given year with the chance in the early 1900s, where 1× would mean no change. Filled dots show the best estimate and open circles show the lowest likely value. Real weather records only give a lowest likely value, so the true figure could be higher. Data: van Oldenborgh et al. (2021)."
+  },
+  {
+    "objectID": "posts/welcome/index.html#rising-heat-is-doing-most-of-the-work",
+    "href": "posts/welcome/index.html#rising-heat-is-doing-most-of-the-work",
+    "title": "Black Summer fire weather is now more likely, and could become far more common",
+    "section": "Rising heat is doing most of the work",
+    "text": "Rising heat is doing most of the work\n\n\n\n\nTable 1: Heat is the main reason fire weather has become more dangerous, while rainfall shows no long-term climate change trend. The number columns show how important each weather ingredient is as a cause of the rise in fire danger. Data: van Oldenborgh et al. (2021).\n\n\n\n\n\n\n\n\n\n\n\n\nWeather ingredient\nHow many of the 4 climate models found it as the biggest cause\nIts rank in real weather records (1 = biggest cause)\nWhat the study found\n\n\n\n\nHeat\n3\n1\nExplains about half of the rise in fire danger in two models. Hot weeks like December 2019 are now at least 2× as likely, and 1–2°C hotter than in the early 1900s.\n\n\nDry air (low humidity)\n1\n2\nThe biggest cause in one model, and shares the lead with heat and wind in another.\n\n\nRainfall and drought\n0\n3\nNo climate change trend in extreme drought, even though 2019 was Australia’s driest year on record. More than half of the 2019 dry spell came from natural swings in ocean and wind patterns.\n\n\nWind\n0\n4\nShares the lead with heat and dry air in one model. Otherwise the smallest cause."
   }
 ]
