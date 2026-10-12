@@ -12,11 +12,9 @@ execute:
   message: false
 ---
 
-In southeastern Australia, the extreme fire weather behind the 2019–20 Black Summer bushfires is no longer as rare as it once was. Climate models show the chance of it happening in any given year has risen since the early 1900s, to about 1.8 times what it was then. If global warming reaches 2°C, that chance could rise to about eight times the early-1900s level [@vanoldenborgh2021].
-
+In southeastern Australia, the extreme fire weather behind the 2019–20 Black Summer bushfires is no longer as rare as it once was. If we count the chance of it happening in any given year in the early 1900s as 1, climate models put today's chance at about 1.8. If global warming reaches 2°C, that chance could rise to about eight times the early-1900s level [@vanoldenborgh2021].
 
 ## Black Summer showed how dangerous extreme fire weather can be
-
 
 Black Summer burned more land near towns and cities than any bushfire season before it. Between late 2019 and January 2020, the fires killed at least 34 people, destroyed about 5,900 buildings and burned at least 19.4 million hectares [@vanoldenborgh2021]. They followed Australia's hottest and driest year on record [@bom2020].
 
@@ -28,14 +26,16 @@ By "fire weather", the researchers mean the weather conditions that make bushfir
 
 The researchers report their results as "times as likely". For example, if Black Summer-level fire weather were twice as likely, you could expect a season like it twice as often as in the early 1900s. The rest of this post looks at how much more likely this fire weather has become, what is driving the change, and what it means for you.
 
-
-
 ## Dangerous fire weather is already more likely than a century ago
+
+To measure how much more likely this fire weather has become, the researchers used two kinds of evidence. The first is weather records for southeastern Australia from 1979 to 2020. These come from a dataset called ERA5, which pieces together past weather from real observations. The second is four climate models: computer simulations that can recreate both today's climate and the cooler climate of the early 1900s. Using both kinds of evidence lets the researchers check one against the other.
+
+Both kinds of evidence point the same way: Black Summer-level fire weather is more likely than it was in the early 1900s. On the same scale as before, where the early 1900s counts as 1, the climate models' best estimate of today's chance is about 1.8, or nearly double. At the very least, it is 1.3, almost a third higher than back then. The weather records, on the other hand, suggest a much bigger jump: at least 4, meaning four times the early-1900s chance. @fig-likelihood shows how far each estimate sits above the early-1900s level.
 
 ```{r}
 #| label: fig-likelihood
-#| fig-cap: "The chance of fire weather as extreme as Black Summer (2019–20) is already higher than in the early 1900s, and could become about eight times higher if the world warms by 2°C. Each estimate compares the chance of this kind of fire weather happening in southeastern Australia in any given year with the chance in the early 1900s. The dashed line (1×) marks the same chance as back then. Filled dots show the best estimate and open circles show the lowest likely value. Real weather records only give a lowest likely value, so the true figure could be higher. Data: @vanoldenborgh2021."
-#| fig-alt: "Dot plot comparing the chance of Black Summer-level fire weather in any given year with the chance in the early 1900s, which is marked by a dashed line at 1 times. Climate models give a best estimate of about 1.8 times today, and at least 1.3 times. Real weather records show at least 4 times today, possibly higher. If the world warms by 2 degrees, climate models give a best estimate of about 8 times, and at least 4 times."
+#| fig-cap: "The chance of fire weather as extreme as Black Summer (2019–20) is already higher than in the early 1900s, and could reach about eight times the early-1900s chance if the world warms by 2°C. Each estimate compares the chance of this kind of fire weather happening in southeastern Australia in any given year with the chance in the early 1900s. The dashed line (1×) marks the same chance as back then. Filled dots show the best estimate and open circles show the lowest likely value. Real weather records only give a lowest likely value, and the researchers think it overstates the increase. Data: @vanoldenborgh2021."
+#| fig-alt: "Dot plot comparing the chance of Black Summer-level fire weather in any given year with the chance in the early 1900s, which is marked by a dashed line at 1 times. Climate models give a best estimate of about 1.8 times today, and at least 1.3 times. Real weather records show at least 4 times today, though this is likely an overestimate. If the world warms by 2 degrees, climate models give a best estimate of about 8 times, and at least 4 times."
 #| fig-width: 8
 #| fig-height: 5
 
@@ -50,7 +50,7 @@ dots <- tibble(
   at_least = c(1.3, 4, 4),
   best     = c(1.8, NA, 8),
   at_least_label = c("At least 1.3×",
-                     "At least 4×\n(could be higher)",
+                     "At least 4×\n(likely an overestimate)",
                      "At least 4×")
 )
 dots$scenario <- factor(dots$scenario, levels = dots$scenario)
@@ -97,12 +97,22 @@ ggplot(dots, aes(x = scenario)) +
   )
 ```
 
+The two estimates differ because each has a known weakness, and the weaknesses pull in opposite directions. Climate models tend to underestimate how much extreme heat has increased, so their figures are likely too low. The weather records start only in 1979 and include an unusually dry stretch that does not appear in rainfall records going back to 1900, so their figure is likely too high. The true increase is therefore probably larger than the climate models suggest, but smaller than the weather records show.
+
+The chance could keep rising as the world warms. If global warming reaches 2°C, the climate models put the chance of Black Summer-level fire weather at about 8 on the same scale, and at least 4. This figure comes from only two of the four climate models tested, so it is less certain than the figures for today. Like the other climate model estimates, it may also be too low.
+
+Together, these results answer the first question from the start of this post: Black Summer was not a one-off. Fire weather this extreme has already become more common, and it is likely to become more common still. The next question is why.
+
 
 ## Rising heat is doing most of the work
 
+To understand what is driving the change, it helps to know what makes fire weather dangerous. Four weather ingredients matter: heat dries out leaves, grass and fallen branches so they burn more easily; dry air pulls moisture out of plants; a lack of rain keeps the bush dry for longer; and wind pushes fires forward and carries embers.
+
+Of these four ingredients, heat matters most. It is the biggest cause of rising fire danger in the weather records and in three of the four climate models, as @tbl-drivers shows by ranking each ingredient. Extreme heat itself has become more common too: a hot week like the one in December 2019 is at least twice as likely as it was in the early 1900s. Dry air comes second, adding to the effect of heat.
+
 ```{r}
 #| label: tbl-drivers
-#| tbl-cap: "Heat is the main reason fire weather has become more dangerous, while rainfall shows no long-term climate change trend. The number columns show how important each weather ingredient is as a cause of the rise in fire danger. Data: van Oldenborgh et al. (2021)."
+#| tbl-cap: "Heat is the biggest driver of rising fire danger in southeastern Australia, ahead of dry air, rainfall and wind. The number columns show how important each weather ingredient is as a cause of the rise in fire danger. In one climate model, heat, dry air and wind are tied for biggest cause, so that model is counted for all three. Data: @vanoldenborgh2021."
 
 # Findings reported by van Oldenborgh et al. (2021)
 drivers <- tibble::tibble(
@@ -110,17 +120,22 @@ drivers <- tibble::tibble(
                            "Dry air (low humidity)",
                            "Rainfall and drought",
                            "Wind"),
-  `How many of the 4 climate models found it as the biggest cause` = c(3, 1, 0, 0),
+  `How many of the 4 climate models found it the biggest cause (ties counted)` = c(3, 2, 0, 1),
   `Its rank in real weather records (1 = biggest cause)` = c(1, 2, 3, 4),
   `What the study found` = c(
-    "Explains about half of the rise in fire danger in two models. Hot weeks like December 2019 are now at least 2× as likely, and 1–2°C hotter than in the early 1900s.",
-    "The biggest cause in one model, and shares the lead with heat and wind in another.",
-    "No climate change trend in extreme drought, even though 2019 was Australia's driest year on record. More than half of the 2019 dry spell came from natural swings in ocean and wind patterns.",
-    "Shares the lead with heat and dry air in one model. Otherwise the smallest cause."
+    "Explains about half of the rise in fire danger in two climate models",
+    "Biggest cause in one climate model, and tied for biggest in another",
+    "Ranks third likely because recent decades happened to be dry; no long-term climate change trend",
+    "Tied for biggest cause in one climate model; small everywhere else"
   )
 )
 
 knitr::kable(drivers, align = c("l", "r", "r", "l"))
 ```
 
+ Rainfall, however, tells a different story. Australia had its driest year on record in 2019, yet the researchers found no climate change trend in droughts this extreme. More than half of the 2019 dry spell came from natural swings in ocean and wind patterns, known as the Indian Ocean Dipole and the Southern Annular Mode.
+
+So the answer to the second question is clear: human-caused climate change is making hot weather more extreme, and that heat is the main reason fire danger is rising. Dry years like 2019 will still happen naturally, but each one arrives in a hotter climate than a century ago. 
+
+Before looking at what this means for you, it helps to know what these results can and cannot tell us.
 
