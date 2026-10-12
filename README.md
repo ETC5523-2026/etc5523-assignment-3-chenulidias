@@ -36,7 +36,7 @@ The figure and table are built from results reported in this paper (probability 
 
 ## Generative AI declaration
 
-I used ChatGPT to help plan and develop the website and blog post. This included assistance with CSS styling, Quarto YAML and page layout, grammar and clarity of written text, and explaining or troubleshooting R code. I also used ChatGPT to help refine tables and visual presentation. I independently evaluated and revised every suggestion for all code, figures, tables and written content submitted.
+I used ChatGPT for assistance with CSS styling, Quarto YAML and page layout, grammar and clarity of written text, explaining or troubleshooting R code, and debugging a Quarto rendering error. I also used ChatGPT to refine tables and visual presentation. I independently evaluated and revised every suggestion for all code, figures, tables and written content submitted.
 
 ## Image credit
 
