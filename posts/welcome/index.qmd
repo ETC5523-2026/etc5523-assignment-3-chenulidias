@@ -5,6 +5,9 @@ author: "Chenuli Muthukuda Arachchige"
 date: "2026-10-12"
 image: thumbnail.jpg
 bibliography: references.bib
+format:
+  html:
+    toc: true
 execute:
   echo: false
   warning: false
