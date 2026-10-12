@@ -3,7 +3,6 @@ title: "Climate change has nearly doubled the chance of Black Summer-level fire 
 description: "What a climate study found about bushfire weather in southeastern Australia, and what it means for people who live there."
 author: "Chenuli Muthukuda Arachchige"
 date: "2026-10-12"
-categories: [bushfires, climate, data]
 image: thumbnail.jpg
 bibliography: references.bib
 execute:
@@ -146,7 +145,7 @@ knitr::kable(drivers, align = c("l", "c", "c", "l")) |>
   column_spec(4, width = "18em")
 ```
 
- Rainfall, however, tells a different story. Australia had its driest year on record in 2019, yet the researchers found no climate change trend in droughts this extreme. More than half of the 2019 dry spell came from natural swings in ocean and wind patterns, known as the Indian Ocean Dipole and the Southern Annular Mode.
+Rainfall, however, tells a different story. Australia had its driest year on record in 2019, yet the researchers found no climate change trend in droughts this extreme. More than half of the 2019 dry spell came from natural swings in ocean and wind patterns, known as the Indian Ocean Dipole and the Southern Annular Mode.
 
 So the answer to the second question is clear: human-caused climate change is making hot weather more extreme, and that heat is the main reason fire danger is rising. Dry years like 2019 will still happen naturally, but each one arrives in a hotter climate than a century ago. 
 
