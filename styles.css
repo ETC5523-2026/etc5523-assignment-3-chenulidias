@@ -87,3 +87,8 @@ body {
 .quarto-title-banner {
   background-color: var(--eucalyptus-mist);
 }
+
+/* Match the references section to the page background */
+#quarto-appendix.default {
+  background-color: var(--bush-paper);
+}
