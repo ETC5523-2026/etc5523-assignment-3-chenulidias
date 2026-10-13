@@ -1,0 +1,104 @@
+/* Load only two Google Fonts: a readable sans-serif body font and a warm serif heading font. */
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap");
+
+/* Calm Australian bush palette */
+:root {
+  --bush-paper: #f7f4eb;
+  --bush-ink: #24352d;
+  --eucalyptus-dark: #1f4035;
+  --eucalyptus-mist: #e4ece6;
+  --warm-earth: #9a5a2d;
+  --warm-earth-dark: #713d1d;
+  --banksia: #f1e5c8;
+  --focus-ring: #c5752d;
+  --body-font: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+  --heading-font: "Merriweather", Georgia, serif;
+}
+
+body {
+  background-color: var(--bush-paper);
+  color: var(--bush-ink);
+  font-family: var(--body-font);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* Page-content headings only: this leaves Quarto navigation and layout alone. */
+#quarto-content h1,
+#quarto-content h2,
+#quarto-content h3,
+#quarto-content h4,
+#quarto-content h5,
+#quarto-content h6,
+#title-block-header .title {
+  color: var(--eucalyptus-dark);
+  font-family: var(--heading-font);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+/* Page-content links only: navbar, footer and other Quarto links keep their own styling. */
+#quarto-content main a,
+#quarto-content .content a {
+  color: var(--warm-earth-dark);
+  font-weight: 600;
+  text-decoration-color: var(--warm-earth);
+  text-underline-offset: 0.16em;
+}
+
+#quarto-content main a:hover,
+#quarto-content .content a:hover {
+  color: var(--eucalyptus-dark);
+  text-decoration-thickness: 0.14em;
+}
+
+#quarto-content main a:focus-visible,
+#quarto-content .content a:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* The navbar is styled separately because it sits outside the main content area. */
+.navbar {
+  background-color: var(--eucalyptus-dark);
+  border-bottom: 4px solid var(--warm-earth);
+  font-family: var(--body-font);
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+  color: #ffffff;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: var(--banksia);
+}
+
+.navbar-nav .nav-link.active {
+  color: #ffffff;
+  text-decoration: underline;
+  text-decoration-color: var(--banksia);
+  text-underline-offset: 0.35em;
+}
+
+/* Title banner: soft eucalyptus green so it matches the rest of the theme. */
+.quarto-title-banner {
+  background-color: var(--eucalyptus-mist);
+}
+
+/* Match the references section to the page background */
+#quarto-appendix.default {
+  background-color: var(--bush-paper);
+}
+
+/* Make the site title's hover colour match the other navbar links.
+   !important is needed here to override Quarto's built-in navbar title style. */
+.navbar .navbar-brand:hover,
+.navbar .navbar-brand:focus,
+.navbar .navbar-brand:hover *,
+.navbar .navbar-brand:focus * {
+  color: var(--banksia) !important;
+}
+

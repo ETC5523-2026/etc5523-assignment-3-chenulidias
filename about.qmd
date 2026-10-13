@@ -1,13 +1,27 @@
 ---
-title: "About"
+title: "Chenuli Muthukuda Arachchige"
 image: profile.jpg
 about:
-  template: jolla
+  template: trestles
+  image-shape: round
   links:
     - icon: github
-      text: Github
-      href: https://github.com/etc5523-2022
-
+      text: GitHub
+      href: https://github.com/ChenuliDias
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/chenuli-muthukuda-arachchige-3262b42b1
+    - icon: envelope
+      text: Email
+      href: mailto:cmut0005@student.monash.edu
 ---
 
-This is a blog template for the ETC5523 Communicating with Data assessment at Monash University.
+Hi, I'm Chenuli! I'm currently a first-year Master of Business Analytics student at Monash University in Clayton Australia.
+
+I completed my Bachelor of Business and Commerce at Monash University Malaysia, majoring in International Business Management, with minors in marketing and management. That degree gave me a strong understanding of how organisations, markets and people work, and taught me that good decisions depend on information people can actually understand and use.
+
+In my Masters, I'm building the technical side of that: working with R, cleaning and analysing data, statistical modelling, and turning results into clear visualisations and reports.
+
+I'm open to opportunities in business analytics and data-driven roles, especially where data can help organisations make better decisions.
+
+Having a multicultural background and studying in different countries has shaped how I see the world and how I connect with people from different backgrounds. It has also given me a love of travelling and experiencing new cultures.
