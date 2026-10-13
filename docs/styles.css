@@ -92,3 +92,20 @@ body {
 #quarto-appendix.default {
   background-color: var(--bush-paper);
 }
+
+/* Darker yellow for all navbar links when hovered, clicked or active */
+.navbar .nav-link:hover,
+.navbar .nav-link:focus,
+.navbar .nav-link.active,
+.navbar .dropdown-toggle.show,
+.navbar .dropdown-toggle:focus {
+  color: #E6B800 !important;
+}
+
+/* Items inside the "Data stories" dropdown */
+.navbar .dropdown-item:hover,
+.navbar .dropdown-item:focus,
+.navbar .dropdown-item.active {
+  color: #E6B800 !important;
+  background-color: transparent !important;
+}
