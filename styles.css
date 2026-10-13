@@ -93,19 +93,12 @@ body {
   background-color: var(--bush-paper);
 }
 
-/* Darker yellow for all navbar links when hovered, clicked or active */
-.navbar .nav-link:hover,
-.navbar .nav-link:focus,
-.navbar .nav-link.active,
-.navbar .dropdown-toggle.show,
-.navbar .dropdown-toggle:focus {
-  color: #E6B800 !important;
+/* Make the site title's hover colour match the other navbar links.
+   !important is needed here to override Quarto's built-in navbar title style. */
+.navbar .navbar-brand:hover,
+.navbar .navbar-brand:focus,
+.navbar .navbar-brand:hover *,
+.navbar .navbar-brand:focus * {
+  color: var(--banksia) !important;
 }
 
-/* Items inside the "Data stories" dropdown */
-.navbar .dropdown-item:hover,
-.navbar .dropdown-item:focus,
-.navbar .dropdown-item.active {
-  color: #E6B800 !important;
-  background-color: transparent !important;
-}
